@@ -20,7 +20,7 @@ block content
         a(ng-click='slideLeft()')
           svg
             path(fill='#416175' d='m0,20 30,-20 v40z')
-      img.col-md-4(src="{{ currentProject.img }}")
+      img.col-md-4(alt="Изображение проекта" src="{{ currentProject.img }}")
       div.col-md-4
         h1 {{ currentProject.title }}
         p {{ currentProject.description }}
