@@ -14,17 +14,17 @@ block content
         li Базы данных - PostgreSQL, Sqlite, NoSQL
         li SCM - git
         li Другие - Heroku, Apache/Nginx, Jenkins, Swagger, Consul, Zato
-  div(ng-controller='ProjectsController').project.container
+  div(ng-controller='ProjectsController').project.container.col-md-12
     div.row
-      div#left-trigger.trigger.col-md-2
+      div#left-trigger.trigger.col-xs-2
         a(ng-click='slideLeft()')
           svg
             path(fill='#416175' d='m0,20 30,-20 v40z')
-      img.col-md-4(alt="Изображение проекта" src="{{ currentProject.img }}")
-      div.col-md-4
+      img.col-xs-4(alt="Изображение проекта" src="{{ currentProject.img }}")
+      div.col-xs-4
         h1 {{ currentProject.title }}
         p {{ currentProject.description }}
         a(href="{{ currentProject.link }}") Ссылка
-      div(ng-click='slideRight()')#right-trigger.trigger.col-md-2
+      div(ng-click='slideRight()')#right-trigger.trigger.col-xs-2
         svg
           path(fill='#416175' d='m0,0 30,20 -30,20z')
