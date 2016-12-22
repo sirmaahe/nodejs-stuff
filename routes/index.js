@@ -12,6 +12,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Мои проекты' });
 });
 
+router.get('/about', function(req, res, next) {
+    res.render('about');
+});
+
 router.get('/projects', function(req, res, next) {
   db.find({}).exec(function(err, data) {
     if (err) res.send(err);
