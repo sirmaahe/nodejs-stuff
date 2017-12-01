@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.col-md-8.col-md-offset-2.text-intro
+    div.row
+      h1.first-title.col-md-9 Добро пожаловать на страницу моих проектов!
+    div.row
+      p.col-md-12.
+          Привет! Меня зовут Антон. Я full stack разработчик.
+      p.col-md-12 Tech stack:
+    div.row
+      ul
+        li Языки программирования - Python, JS
+        li Backend - Django, Flask, Tornado, Nodejs, Express
+        li Frontend - LESS, Bootstrap, Angular, Pug
+        li Базы данных - PostgreSQL, Sqlite, NoSQL
+        li SCM - git
+        li Другие - Heroku, Apache/Nginx, Jenkins, Swagger, Consul, Zato
+        a(href='/about') Подробнее
+  div(ng-controller='ProjectsController').project.container.col-md-12
+    div.row
+      div(ng-click='slideLeft()')#left-trigger.trigger.col-xs-2
+        svg.col-xs-12
+          path(fill='#416175' d='m0,20 30,-20 v40z')
+      img.col-xs-4(alt="Изображение проекта" src="{{ currentProject.img }}")
+      div.col-xs-4
+        h1 {{ currentProject.title }}
+        p {{ currentProject.description }}
+        a(href="{{ currentProject.link }}") Ссылка
+      div(ng-click='slideRight()')#right-trigger.trigger.col-xs-2
+        svg.col-xs-12
+          path(fill='#416175' d='m0,0 30,20 -30,20z')
